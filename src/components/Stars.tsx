@@ -1,3 +1,5 @@
+import './Stars.css'
+
 function Stars(){
 
     const stars=[
