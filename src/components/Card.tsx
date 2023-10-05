@@ -1,4 +1,5 @@
 import './Card.css'
+import BasicModal from './MuiModal';
 
 interface Props {
     icon: string;
@@ -17,7 +18,9 @@ const Card = ( props: Props ) => {
                 <div className="card__content">
                     <h3>{props.title}</h3>
                     <p>{props.text}</p>
-                    <a href="#">Check More</a>
+                    <a href="#">
+                        <BasicModal />
+                    </a>
                 </div>
             </div>
         </div>

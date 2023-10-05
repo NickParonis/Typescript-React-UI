@@ -82,3 +82,13 @@ background: linear-gradient(180deg, rgba(32,41,51,1) 35%, rgba(32,41,51,1) 68%, 
 .cardlist {
   padding: 20px;
 }
+
+.menu__icon{
+  color: #fff;
+}
+
+.burgervg{
+  width: 40px;
+  margin: 0 auto;
+  display: block;
+}
