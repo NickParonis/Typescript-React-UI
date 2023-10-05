@@ -1,10 +1,12 @@
 import Stars from './components/Stars';
-import Content from './components/Content';
+import Container from './components/Container';
+
 
 function App(){
+
   return (
     <>
-    <Content />
+    <Container />
     <Stars />
     </>
   );
