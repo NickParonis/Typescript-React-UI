@@ -1,7 +1,12 @@
 import Stars from './components/Stars';
+import Content from './components/Content';
 
 function App(){
-  return <div><Stars /></div>;
-};
-
+  return (
+    <>
+    <Content />
+    <Stars />
+    </>
+  );
+}
 export default App;
