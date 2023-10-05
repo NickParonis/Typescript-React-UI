@@ -1,13 +1,20 @@
 import Stars from './components/Stars';
-import Container from './components/Container';
+import CardList from './components/CardList.tsx';
 
 
 function App(){
 
   return (
     <>
-    <Container />
-    <Stars />
+    <section className='bio'>
+      <Stars />
+    </section>
+    <section className='cardlist'>
+        <CardList />
+    </section>
+    <section className='lorem'>
+        <CardList />
+    </section>
     </>
   );
 }
