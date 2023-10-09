@@ -1,16 +1,16 @@
 import './Card.css'
-import BasicModal from './MuiModal';
 
 interface Props {
     icon: string;
     title: string;
     text: string;
     color: string;
+    buttontext: string;
 }
 
 const Card = ( props: Props ) => {
     return (
-        <div className={"card__bx card__bx__" + props.color} style={{ }}>
+        <div className={"card__bx card__bx__" + props.color}>
             <div className="card__data">
                 <div className="card__icon">
                     <i className={props.icon}></i>
@@ -19,7 +19,7 @@ const Card = ( props: Props ) => {
                     <h3>{props.title}</h3>
                     <p>{props.text}</p>
                     <a href="#">
-                        <BasicModal />
+                        {props.buttontext}
                     </a>
                 </div>
             </div>
