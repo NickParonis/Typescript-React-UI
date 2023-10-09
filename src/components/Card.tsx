@@ -6,6 +6,7 @@ interface Props {
     text: string;
     color: string;
     buttontext: string;
+    buttonURL: string;
 }
 
 const Card = ( props: Props ) => {
@@ -18,7 +19,7 @@ const Card = ( props: Props ) => {
                 <div className="card__content">
                     <h3>{props.title}</h3>
                     <p>{props.text}</p>
-                    <a href="#">
+                    <a href={props.buttonURL} target="_blank">
                         {props.buttontext}
                     </a>
                 </div>
