@@ -1,13 +1,17 @@
 import Card from './Card.tsx';
 import './Cardcontainer.css';
 import { useState } from 'react';
+import { useEffect } from 'react';
+import Cardsdata from '../data/cards.json'
 
 const CardList = () => {
     const [cards, setCards] = useState([
-            {color: "purple", icon: "fa-solid fa-code", title: "Github", text: "see what can I build, some code", buttontext: "visit github"},
-            {color: "green", icon: "fa-solid fa-file", title: "My Resume", text: "Lorem Ipsum is simply dummy text of the p", buttontext: "show"},
-            {color: "blue", icon: "fa-solid fa-file", title: "About me", text: "Who am I, what do I believe, what is fun and how to find me.", buttontext: "Contact"},
-    ])
+            {color: "", icon: "", title: "", text: "", buttontext: ""},
+    ]);
+    useEffect( () => {
+        setCards(Cardsdata.cardsdata)
+        console.log(Cardsdata.cardsdata)
+    }, []);
     return (
         <>  
             <div className='cardcontainer'>
