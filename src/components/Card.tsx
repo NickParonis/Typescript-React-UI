@@ -1,5 +1,3 @@
-import './Card.css'
-
 interface Props {
     icon: string;
     title: string;

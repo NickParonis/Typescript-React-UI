@@ -2,6 +2,7 @@ import Card from './Card.tsx';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Cardsdata from '../data/cards.json'
+import './Card.css'
 
 const CardListSection = () => {
     const [cards, setCards] = useState([
