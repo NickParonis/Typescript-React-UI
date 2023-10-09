@@ -1,11 +1,11 @@
 /*==================== SERVICE CARD ====================*/
-.card__container {
+
+.cardcontainer {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 60px;
-    justify-content: center;
-    max-width: 90%;
-    padding: 20px;
+    justify-content: space-evenly;
+    width: 100%;
   }
   .card__bx {
     --dark-color: #2e2e2e;
