@@ -1,5 +1,6 @@
 import './Stars.css'
 import './StarsSection.css'
+import './StarsSection.css'
 
 function Stars(){
 
