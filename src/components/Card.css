@@ -1,4 +1,6 @@
-/*==================== SERVICE CARD ====================*/
+.cardlist {
+  padding: 20px;
+}
 
 .cardcontainer {
     display: flex;

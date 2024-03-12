@@ -1,5 +1,3 @@
-import './Card.css'
-
 interface Props {
     icon: string;
     title: string;
@@ -10,6 +8,8 @@ interface Props {
 }
 
 const Card = ( props: Props ) => {
+
+
     return (
         <div className={"card__bx card__bx__" + props.color}>
             <div className="card__data">

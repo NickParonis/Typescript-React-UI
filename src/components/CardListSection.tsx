@@ -2,6 +2,7 @@ import Card from './Card.tsx';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Cardsdata from '../data/cards.json'
+import './Card.css'
 
 const CardListSection = () => {
     const [cards, setCards] = useState([
@@ -14,7 +15,15 @@ const CardListSection = () => {
         <section className='cardlist'>
             <div className='cardcontainer'>
                 {cards.map( (card) => 
-                    <Card key={card.title} title={card.title} text={card.text} icon={card.icon} color={card.color} buttontext={card.buttontext} buttonURL={card.buttonURL}/>
+                    <Card 
+                        key={card.title} 
+                        title={card.title} 
+                        text={card.text} 
+                        icon={card.icon} 
+                        color={card.color} 
+                        buttontext={card.buttontext} 
+                        buttonURL={card.buttonURL}
+                    />
                 )}
             </div>
         </section>
