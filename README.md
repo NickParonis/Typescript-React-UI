@@ -1,7 +1,4 @@
-# this is hosted in the following domain https://nickthegreek.dev/
-
-
-# React reusable UI sections and components.
+# React reusable UI sections and components. This is hosted in the following domain https://nickthegreek.dev/
 - UI with Css animations and flexbox generated from JSON file
 - React Props and Hooks and Typescript
 
