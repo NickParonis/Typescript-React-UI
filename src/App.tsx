@@ -7,7 +7,6 @@ function App(){
   return (
     <>
       <StarsSection />
-      <div></div>
       <CardList />
       {/* <ChatSection /> */}
       {/* <BasicModal /> */}

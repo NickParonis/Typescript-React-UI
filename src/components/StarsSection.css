@@ -2,8 +2,10 @@
         height: 60vh;
     background: rgb(34,34,34);
     POSITION: RELATIVE;
-    background: rgb(32,41,51);
-    background: linear-gradient(180deg, rgba(32,41,51,1) 35%, rgba(32,41,51,1) 68%, rgba(34,34,34,1) 100%);
+    /* background: rgb(32,41,51);
+    background: linear-gradient(180deg, rgba(32,41,51,1) 35%, rgba(32,41,51,1) 68%, rgba(34,34,34,1) 100%); */
+background: #162942;
+    background: linear-gradient(180deg, rgba(22, 41, 66, 1) 0%, rgba(34, 34, 34, 1) 79%);
 }
 
 .biosection{
@@ -17,10 +19,22 @@
 }
 
 .bio {
-    display: flex;
+    margin: 13vh;
+    padding: 4vh;
+    width: 600px;
+    height: 225px;
+    color: white;
+    /* text-align: center;
+    display: flex; */
     flex-direction: column;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.027);
+    backdrop-filter: blur(3px);
+    border-top: 1px solid rgba(77, 104, 138, 0.4);
+    box-shadow: 0px 3px 3px rgb(0, 0, 0, 0.089);
+
 }
 .title{
     font-size: 50px;
@@ -37,15 +51,6 @@
     overflow: hidden; /* Hides any overflow outside the circle */
     border: 2px solid #ccc; /* Add a border if needed */
 }
-
-.bio {
-    padding-right: 13vh;
-    padding-left: 13vh;
-    color: white;
-    text-align: center;
-}
-
-
 
 .bg-animation {
     overflow: hidden;
