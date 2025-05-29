@@ -9,6 +9,7 @@
     justify-content: space-evenly;
     width: 100%;
   }
+  
   .card__bx {
     --dark-color: #2e2e2e;
     --dark-alt-color: #777777;
@@ -16,6 +17,7 @@
     --button-color: #333333;
     --transition: 0.5s ease-in-out;
   
+    
     margin: 25px;
     font-family: inherit;
     height: 270px;
@@ -133,15 +135,15 @@
     box-shadow: 0 0 0 4px var(--dark-color), 0 0 0 300px #eb5ae5;
   }
   .card__bx__purple::after {
-    inset: 60px -10px;
+    inset: 120px -10px;
     border-left: 4px solid #eb5ae5;
-    transform: skew(15deg);
+    /* transform: skew(15deg); */
     border-right: 4px solid #eb5ae5;
   }
   .card__bx__purple::before {
-    inset: -10px 50px;
+    inset: -10px 90px;
     border-top: 4px solid #eb5ae5;
-    transform: skewY(15deg);
+    /* transform: skewY(15deg); */
     border-bottom: 4px solid #eb5ae5;
   }
 
@@ -178,15 +180,15 @@
     box-shadow: 0 0 0 4px var(--dark-color), 0 0 0 300px #89ec5b;
   }
   .card__bx__green::after {
-    inset: 60px -10px;
+    inset: 120px -10px;
     border-left: 4px solid #89ec5b;
-    transform: skew(15deg);
+    /* transform: skew(15deg); */
     border-right: 4px solid #89ec5b;
   }
   .card__bx__green::before {
-    inset: -10px 50px;
+    inset: -10px 90px;
     border-top: 4px solid #89ec5b;
-    transform: skewY(15deg);
+    /* transform: skewY(15deg); */
     border-bottom: 4px solid #89ec5b;
   }
 
@@ -222,14 +224,16 @@
     box-shadow: 0 0 0 4px var(--dark-color), 0 0 0 300px #5b98eb;
   }
   .card__bx__blue::after {
-    inset: 60px -10px;
+    inset: 120px -10px;
     border-left: 4px solid #5b98eb;
-    transform: skew(15deg);
+    /* transform: skew(15deg); */
     border-right: 4px solid #5b98eb;
   }
   .card__bx__blue::before {
-    inset: -10px 50px;
+    inset: -10px 90px;
     border-top: 4px solid #5b98eb;
-    transform: skewY(15deg);
+    /* transform: skewY(15deg); */
     border-bottom: 4px solid #5b98eb;
   }
+
+  

@@ -2,26 +2,26 @@
     "cardsdata": 
     [
         {
-            "color": "purple", 
+            "color": "blue", 
             "icon": "fa-solid fa-code", 
             "title": "Github", 
-            "text": "see what can I build, some code", 
+            "text": "A sample of my code", 
             "buttontext": "visit github",
-            "buttonURL": "https://github.com/NickParonis"
-        },
-        {
-            "color": "green", 
-            "icon": "fa-solid fa-file", 
-            "title": "My linkedin", 
-            "text": "Lorem Ipsum is simply dummy text of the p", 
-            "buttontext": "show",
             "buttonURL": "https://github.com/NickParonis"
         },
         {
             "color": "blue", 
             "icon": "fa-solid fa-file", 
-            "title": "About me", 
-            "text": "Who am I, what do I believe, what is fun and how to find me.", 
+            "title": "Linkedin", 
+            "text": "See my experience", 
+            "buttontext": "visit linkedIn",
+            "buttonURL": "https://www.linkedin.com/in/nick-d-paronis/"
+        },
+        {
+            "color": "blue", 
+            "icon": "fa-solid fa-file", 
+            "title": "Discord", 
+            "text": "Find me online", 
             "buttontext": "Contact",
             "buttonURL": "https://github.com/NickParonis"
         }

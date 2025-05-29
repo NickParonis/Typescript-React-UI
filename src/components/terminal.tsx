@@ -51,7 +51,7 @@ const Terminal: React.FC = () => {
                 <div key={idx}>
                     <span className="prompt">
                         C:\www\NickTheGreek:
-                    </span> 
+                    </span>
                     <span className="terminalResponseLine">
                         &nbsp; {line}
                     </span>
