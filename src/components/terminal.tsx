@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import './Terminal.css';
+import './terminal.css';
 
 const Terminal: React.FC = () => {
-  const lines: string[] = [
-    "Hi, I'm Nick,",
-    "I'm a senior fullstack developer.",
-    "asdf",
-    "You can find me on discord below",
-  ];
+    const lines: string[] = [
+        "Hi, I'm Nick,",
+        "I'm a senior fullstack developer.",
+        "asdf",
+        "You can find me on discord below",
+    ];
 
   const typingSpeed = 50;   // milliseconds per character
   const linePause = 1000;   // pause after each line
@@ -23,17 +23,17 @@ const Terminal: React.FC = () => {
     let timeout: NodeJS.Timeout;
 
     if (charIndex < lines[lineIndex].length) {
-      timeout = setTimeout(() => {
-        setCurrentLine((prev) => prev + lines[lineIndex][charIndex]);
-        setCharIndex((prev) => prev + 1);
-      }, typingSpeed);
+        timeout = setTimeout(() => {
+            setCurrentLine((prev) => prev + lines[lineIndex][charIndex]);
+            setCharIndex((prev) => prev + 1);
+        }, typingSpeed);
     } else {
-      timeout = setTimeout(() => {
-        setDisplayedLines((prev) => [...prev, lines[lineIndex]]);
-        setCurrentLine('');
-        setCharIndex(0);
-        setLineIndex((prev) => prev + 1);
-      }, linePause);
+        timeout = setTimeout(() => {
+            setDisplayedLines((prev) => [...prev, lines[lineIndex]]);
+            setCurrentLine('');
+            setCharIndex(0);
+            setLineIndex((prev) => prev + 1);
+        }, linePause);
     }
 
     return () => clearTimeout(timeout);
@@ -49,13 +49,18 @@ const Terminal: React.FC = () => {
             <div className="terminal-body">
                 {displayedLines.map((line, idx) => (
                 <div key={idx}>
-                    <span className="prompt">C:\www\NickTheGreek</span> {line}
+                    <span className="prompt">
+                        C:\www\NickTheGreek:
+                    </span> 
+                    <span className="terminalResponseLine">
+                        &nbsp; {line}
+                    </span>
                 </div>
                 ))}
                 <div>
-                    <span className="prompt">C:\www\NickTheGreek</span>{' '}
+                    <span className="prompt">C:\www\NickTheGreek:</span>{' '}
                     {lineIndex < lines.length ? currentLine : ''}
-                    <span className="cursor" />
+                    <div className="cursor" />
                 </div>
             </div>
         </div>

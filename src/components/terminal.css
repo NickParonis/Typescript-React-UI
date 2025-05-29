@@ -1,10 +1,19 @@
 .terminal {
-    /*background-color: #1e1e1e;
-     color: #d4d4d4; 
-    font-family: 'Courier New', Courier, monospace;
-    /* border-radius: 10px; */
-    /* padding: 20px; */
-    width: 100%;
+    margin: 3vh;
+    padding: 4vh;
+    width: 600px;
+    height: 225px;
+    color: white;
+    /* text-align: center;
+    display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.027);
+    backdrop-filter: blur(3px);
+    border-top: 1px solid rgba(77, 104, 138, 0.4);
+    box-shadow: 0px 3px 3px rgb(0, 0, 0, 0.089);
     /* max-width: 600px; */
     /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.6) */
 }
@@ -41,16 +50,45 @@
 }
 
 .prompt {
-    color: #00ff99;
+    color: #56749b;
 }
 
 .cursor {
     display: inline-block;
     width: 10px;
     height: 1.1em;
-    background-color: #00ff99;
+    background-color: #8aa2c1;
     animation: blink 1s steps(1) infinite;
-    margin-left: 2px;
+    margin-left: 1px;
+    position: relative;
+    width: 2px;
+    top: 3px;
+}
+
+@media (min-width: 767px) {
+
+}
+
+/* Medium devices (tablets, >= 768px) */
+@media (max-width: 768px) {
+    .prompt {
+            display: none;
+        }
+}
+
+/* Large devices (laptops/desktops, >= 1024px) */
+@media (max-width: 1024px) {
+
+}
+
+/* Extra large devices (large desktops, >= 1200px) */
+@media (max-width: 1200px) {
+
+}
+
+/* Ultra large screens (>= 1600px) */
+@media (max-width: 1600px) {
+
 }
 
 @keyframes blink {

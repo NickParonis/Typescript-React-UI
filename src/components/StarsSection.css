@@ -10,7 +10,7 @@ background: #162942;
 
 .biosection{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     height: 100%;
     width: 100%;
@@ -19,26 +19,15 @@ background: #162942;
 }
 
 .bio {
-    margin: 13vh;
-    padding: 4vh;
-    width: 600px;
-    height: 225px;
-    color: white;
-    /* text-align: center;
-    display: flex; */
-    flex-direction: column;
+    display: flex;
+    width: 10;
     justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 0.027);
-    backdrop-filter: blur(3px);
-    border-top: 1px solid rgba(77, 104, 138, 0.4);
-    box-shadow: 0px 3px 3px rgb(0, 0, 0, 0.089);
-
 }
+
 .title{
     font-size: 50px;
 }
+
 .leftbio, .rightbio {
     display: flex;
     flex-direction: column;
