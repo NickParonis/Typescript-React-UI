@@ -6,6 +6,7 @@
     color: white;
     /* text-align: center;
     display: flex; */
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -19,9 +20,11 @@
 }
 
 .terminal-header {
-    display: flex;
+display: flex;
     gap: 8px;
-    margin-bottom: 10px;
+    position: absolute;
+    /* margin-bottom: 10px; */
+    top: 25px;
 }
 
 .terminal-header span {
@@ -47,6 +50,7 @@
     white-space: pre-wrap;
     font-size: 1rem;
     line-height: 1.6;
+    margin-top: 20px;
 }
 
 .prompt {
