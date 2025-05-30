@@ -57,7 +57,11 @@ display: flex;
 }
 
 .prompt {
-    color: #56749b6e;;
+    color: #56749b6e;
+}
+
+.promptPath {
+    color: #56749b6e;
 }
 
 .cursor {
@@ -89,14 +93,13 @@ display: flex;
         transform: skewX(-78deg);
 }
 
-@media (min-width: 767) {
+@media (min-width: 619px) {
 
 }
 
 /* Medium devices (tablets, >= 768px) */
-@media (min-width: 768) {
+@media (max-width: 620px) {
     .prompt {
-            width: 100px;
             display: none;
         }
 }
