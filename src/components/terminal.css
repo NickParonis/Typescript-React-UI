@@ -1,22 +1,25 @@
 .terminal {
-    margin: 3vh;
-    padding: 4vh;
-    width: 600px;
-    height: 225px;
-    color: white;
-    /* text-align: center;
-    display: flex; */
-    /* display: flex; */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.027);
-    backdrop-filter: blur(3px);
-    border-top: 1px solid rgba(77, 104, 138, 0.4);
-    box-shadow: 0px 3px 3px rgb(0, 0, 0, 0.089);
-    /* max-width: 600px; */
-    /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.6) */
+    overflow: hidden;
+        margin: 3vh;
+        /* padding: 4vh; */
+        padding-top: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        width: 600px;
+        height: 225px;
+        color: #e4ebffe8    ;
+        /* display: flex
+    ; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.027);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(77, 104, 138, 0.4);
+        box-shadow: 0px 3px 3px rgb(0, 0, 0, 0.089);
+        max-width: 600px;
 }
 
 .terminal-header {
@@ -24,7 +27,7 @@ display: flex;
     gap: 8px;
     position: absolute;
     /* margin-bottom: 10px; */
-    top: 25px;
+    top: 20px;
 }
 
 .terminal-header span {
@@ -35,11 +38,11 @@ display: flex;
 }
 
 .red {
-    background-color: #ff5f56;
+    background-color: #ff5f56eb;
 }
 
 .yellow {
-    background-color: #ffbd2e;
+    background-color: #ffbd2ee6;
 }
 
 .green {
@@ -54,7 +57,7 @@ display: flex;
 }
 
 .prompt {
-    color: #56749b;
+    color: #56749b6e;;
 }
 
 .cursor {
@@ -69,13 +72,31 @@ display: flex;
     top: 3px;
 }
 
-@media (min-width: 767px) {
+.terminal:hover span{
+    top:110%;
+    transition: 0.5s;
+}
+
+.shine{
+    display: block;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(80deg, transparent, #85a7e842, transparent);
+        position: absolute;
+        background: line;
+        top: -110%;
+        left: 0;
+        transform: skewX(-78deg);
+}
+
+@media (min-width: 767) {
 
 }
 
 /* Medium devices (tablets, >= 768px) */
-@media (max-width: 768px) {
+@media (min-width: 768) {
     .prompt {
+            width: 100px;
             display: none;
         }
 }

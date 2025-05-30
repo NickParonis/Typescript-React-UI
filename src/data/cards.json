@@ -6,24 +6,24 @@
             "icon": "fa-solid fa-code", 
             "title": "Github", 
             "text": "A sample of my code", 
-            "buttontext": "visit github",
+            "buttontext": "Visit github",
             "buttonURL": "https://github.com/NickParonis"
         },
         {
             "color": "blue", 
-            "icon": "fa-solid fa-file", 
+            "icon": "fa-brands fa-linkedin-in", 
             "title": "Linkedin", 
-            "text": "See my experience", 
-            "buttontext": "visit linkedIn",
+            "text": "My corporate experience", 
+            "buttontext": "Visit linkedIn",
             "buttonURL": "https://www.linkedin.com/in/nick-d-paronis/"
         },
         {
             "color": "blue", 
-            "icon": "fa-solid fa-file", 
+            "icon": "fa-brands fa-discord", 
             "title": "Discord", 
             "text": "Find me online", 
-            "buttontext": "Contact",
-            "buttonURL": "https://github.com/NickParonis"
+            "buttontext": "Join channel",
+            "buttonURL": "https://discord.gg/3HJYsGAx"
         }
     ]
 }
