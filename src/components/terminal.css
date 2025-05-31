@@ -22,6 +22,23 @@
         max-width: 600px;
 }
 
+.terminal:hover .shine {
+    top: 110%;
+    transition: 0.5s;
+}
+
+.shine {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(80deg, transparent, #85a7e842, transparent);
+    position: absolute;
+    background: line;
+    top: -110%;
+    left: 0;
+    transform: skewX(-78deg);
+}
+
 .terminal-header {
 display: flex;
     gap: 8px;
@@ -37,6 +54,13 @@ display: flex;
     display: inline-block;
 }
 
+.terminal-body {
+    white-space: pre-wrap;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
 .red {
     background-color: #ff5f56eb;
 }
@@ -49,18 +73,7 @@ display: flex;
     background-color: #27c93f;
 }
 
-.terminal-body {
-    white-space: pre-wrap;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-top: 20px;
-}
-
 .prompt {
-    color: #56749b6e;
-}
-
-.promptPath {
     color: #56749b6e;
 }
 
@@ -76,29 +89,12 @@ display: flex;
     top: 3px;
 }
 
-.terminal:hover span{
-    top:110%;
-    transition: 0.5s;
-}
-
-.shine{
-    display: block;
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(80deg, transparent, #85a7e842, transparent);
-        position: absolute;
-        background: line;
-        top: -110%;
-        left: 0;
-        transform: skewX(-78deg);
-}
-
-@media (min-width: 619px) {
+@media (min-width: 629px) {
 
 }
 
 /* Medium devices (tablets, >= 768px) */
-@media (max-width: 620px) {
+@media (max-width: 630px) {
     .prompt {
             display: none;
         }

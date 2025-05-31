@@ -2,11 +2,11 @@ import './Stars.css'
 import './StarsSection.css'
 import Terminal from './terminal';
 
-function Stars(){
+function StarsSection(){
 
     const stars=[
         'stars',
-        'stars2'
+        'starsBig'
     ];
 
     return (
@@ -24,4 +24,4 @@ function Stars(){
         </section>
     );
 }
-export default Stars;
+export default StarsSection;
