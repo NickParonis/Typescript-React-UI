@@ -16,14 +16,14 @@ function StarsSection() {
         }
     };
 
-    const handleClearLines = () => {
-        setLines([]);
-    };
+    // const handleClearLines = () => {
+    //     setLines([]);
+    // };
 
     return (
         <section className='starsSection'>
             <div className='biosection'>
-                <div className='bio text-center'>
+                <div className='bio text-center' onClick={() => loadMessageById("1")}>
                 <Terminal lines={lines} />
                 </div>
             </div>
