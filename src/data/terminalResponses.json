@@ -1,0 +1,22 @@
+[
+  {
+    "id": "0",
+    "title": "Welcome text",
+    "commandName": "Welcome",
+    "text": [
+      "Hi, I'm Nick,",
+      "I'm a fullstack developer.",
+      "No idea why I made this website",
+      "but let's see how it turns out",
+      "You can click here to get a quote"
+    ]
+  },
+  {
+    "id": "1",
+    "title": "Another message",
+    "commandName": "Experience",
+    "text": [
+      "This is a new triggered message!"
+    ]
+  }
+]
