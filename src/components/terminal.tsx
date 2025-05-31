@@ -2,21 +2,27 @@ import React, { useEffect, useState, useRef } from 'react';
 import './terminal.css';
 
 interface TerminalProps {
-    lines: string[];
+  lines: string[];
+  onTypingDone?: () => void;
 }
 
-const Terminal: React.FC<TerminalProps> = ({ lines })  => {
+const Terminal: React.FC<TerminalProps> = ({ lines, onTypingDone })  => {
 
-  const typingSpeed = 50;   // milliseconds per character
-  const linePause = 1000;   // pause after each line
-const terminalBodyRef = useRef<HTMLDivElement | null>(null);
-  const [displayedLines, setDisplayedLines] = useState<string[]>([]);
-  const [currentLine, setCurrentLine] = useState<string>('');
-  const [lineIndex, setLineIndex] = useState<number>(0);
-  const [charIndex, setCharIndex] = useState<number>(0);
+    const typingSpeed = 50;   // milliseconds per character
+    const linePause = 1000;   // pause after each line
+    const terminalBodyRef = useRef<HTMLDivElement | null>(null);
+
+    const [displayedLines, setDisplayedLines] = useState<string[]>([]);
+    const [currentLine, setCurrentLine] = useState<string>('');
+    const [lineIndex, setLineIndex] = useState<number>(0);
+    const [charIndex, setCharIndex] = useState<number>(0);
 
     useEffect(() => {
-        if (lineIndex >= lines.length) return;
+        if (lineIndex >= lines.length) {
+        // All lines typed
+            onTypingDone?.();
+            return;
+        }
 
         let timeout: NodeJS.Timeout;
 
@@ -43,14 +49,15 @@ const terminalBodyRef = useRef<HTMLDivElement | null>(null);
         setCurrentLine('');
         setLineIndex(0);
         setCharIndex(0);
-    }
-    }, [lines]);
+    }}, [lines]);
 
     useEffect(() => {
         if (terminalBodyRef.current) {
             terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
         }
     }, [displayedLines, currentLine]);
+
+    
     return (
         <div className="terminal">
             <span className="shine"></span>

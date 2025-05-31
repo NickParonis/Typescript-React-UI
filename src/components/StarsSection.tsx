@@ -1,6 +1,7 @@
 import './Stars.css';
 import './StarsSection.css';
 import terminalResponses from '../data/terminalResponses.json'
+import quotes from '../data/quotes.json'
 import Terminal from './terminal';
 import { useState } from 'react';
 
@@ -8,11 +9,16 @@ function StarsSection() {
     const stars = ['stars', 'starsBig'];
 
     const [lines, setLines] = useState(terminalResponses[0].text);
+    const [isTypingDone, setIsTypingDone] = useState(false);
 
-    const loadMessageById = (id: string) => {
-        const msg = terminalResponses.find(m => m.id === id);
-        if (msg) {
-            setLines(prev => [...prev, ...msg.text]);
+    const displayRandomQuote = () => {
+        if (isTypingDone) {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
+            if (quote) {
+                setIsTypingDone(false);
+                setLines(prev => [...prev, "---", quote.author + ": ", quote.quoteText]);
+            }
         }
     };
 
@@ -23,8 +29,8 @@ function StarsSection() {
     return (
         <section className='starsSection'>
             <div className='biosection'>
-                <div className='bio text-center' onClick={() => loadMessageById("1")}>
-                <Terminal lines={lines} />
+                <div className='bio text-center' onClick={() => displayRandomQuote()}>
+                <Terminal lines={lines} onTypingDone={() => setIsTypingDone(true)} />
                 </div>
             </div>
             <div className="bg-animation">
