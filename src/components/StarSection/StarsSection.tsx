@@ -1,8 +1,9 @@
 import './Stars.css';
 import './StarsSection.css';
-import terminalResponses from '../data/terminalResponses.json'
-import quotes from '../data/quotes.json'
+import terminalResponses from '../../data/terminalResponses.json'
+import quotes from '../../data/quotes.json'
 import Terminal from './terminal';
+// import ActionButton from './actionButton';
 import { useState } from 'react';
 
 function StarsSection() {
@@ -29,8 +30,12 @@ function StarsSection() {
     return (
         <section className='starsSection'>
             <div className='biosection'>
-                <div className='bio text-center' onClick={() => displayRandomQuote()}>
-                <Terminal lines={lines} onTypingDone={() => setIsTypingDone(true)} />
+                <div className='displayGlass' onClick={() => displayRandomQuote()}>
+                    <span className="shine"></span>
+                    <Terminal lines={lines} onTypingDone={() => setIsTypingDone(true)} />
+                    {/* <div className='displayButtons'>
+                        <ActionButton className="actionButton" actionCommand={() => console.log("test")}/>
+                    </div> */}
                 </div>
             </div>
             <div className="bg-animation">

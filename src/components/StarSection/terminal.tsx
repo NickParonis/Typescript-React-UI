@@ -44,12 +44,13 @@ const Terminal: React.FC<TerminalProps> = ({ lines, onTypingDone })  => {
     }, [charIndex, lineIndex, lines]);
     
     useEffect(() => {
-    if (lines.length === 0) {
-        setDisplayedLines([]);
-        setCurrentLine('');
-        setLineIndex(0);
-        setCharIndex(0);
-    }}, [lines]);
+        if (lines.length === 0) {
+            setDisplayedLines([]);
+            setCurrentLine('');
+            setLineIndex(0);
+            setCharIndex(0);
+        }
+    }, [lines]);
 
     useEffect(() => {
         if (terminalBodyRef.current) {
@@ -60,7 +61,6 @@ const Terminal: React.FC<TerminalProps> = ({ lines, onTypingDone })  => {
     
     return (
         <div className="terminal">
-            <span className="shine"></span>
             <div className="terminal-header">
                 <span className="red" />
                 <span className="yellow" />
