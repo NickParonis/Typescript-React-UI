@@ -24,7 +24,7 @@ background: #162942;
         margin: auto;
         width: 10;
         justify-content: center;
-        width: 600px;
+        max-width: 600px;
         /* height: 225px; */
         color: #e4ebffe8;
         /* display: flex

@@ -16,7 +16,7 @@
 }
 
 .terminal-header {
-display: flex;
+    display: flex;
     gap: 8px;
     position: absolute;
     /* margin-bottom: 10px; */
@@ -92,8 +92,8 @@ display: flex;
 /* Medium devices (tablets, >= 768px) */
 @media (max-width: 630px) {
     .prompt {
-            display: none;
-        }
+        display: none;
+    }
 }
 
 /* Large devices (laptops/desktops, >= 1024px) */
