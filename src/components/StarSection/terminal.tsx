@@ -82,6 +82,7 @@ const Terminal: React.FC<TerminalProps> = ({ lines, onTypingDone })  => {
                     <span className="prompt">
                         C:\www\NickTheGreek: &nbsp;
                     </span>
+                    {/* <div className="userInput"></div> */}
                     <span className="currentLine">
                         &nbsp;
                         {lineIndex < lines.length ?  currentLine : ''}

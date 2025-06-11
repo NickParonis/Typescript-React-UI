@@ -3,17 +3,19 @@ import './StarsSection.css';
 import terminalResponses from '../../data/terminalResponses.json'
 import quotes from '../../data/quotes.json'
 import Terminal from './terminal';
-// import ActionButton from './actionButton';
-import { useState } from 'react';
+import ActionButton from './actionButton';
+import { useState, useEffect } from 'react';
 
 function StarsSection() {
     const stars = ['stars', 'starsBig'];
+    const [commandButtons, setcommandButtons] = useState([{Name: "RandomQuote", Click: "displayRandomQuote"}]);
 
     const [lines, setLines] = useState(terminalResponses[0].text);
     const [isTypingDone, setIsTypingDone] = useState(false);
+    const [teminalMenu] = useState("mainMenu");
 
     const displayRandomQuote = () => {
-        if (isTypingDone) {
+        if (isTypingDone) { 
             const randomIndex = Math.floor(Math.random() * quotes.length);
             const quote = quotes[randomIndex];
             if (quote) {
@@ -23,6 +25,26 @@ function StarsSection() {
         }
     };
 
+    useEffect(() => {
+        if (!isTypingDone && teminalMenu == "mainMenu") {
+            // isTypingDone changed from true to false
+            console.log("command buttons added to state");
+            setcommandButtons([]);
+        };
+        if (isTypingDone) {
+            // isTypingDone changed from true to false
+            console.log("command buttons added to state");
+            setcommandButtons([
+                { Name: "RandomQuote", Click: "displayRandomQuote" },
+                { Name: "PlayGame", Click: "displayRandomQuote" }
+            ]);
+        }
+    }, [isTypingDone]);
+
+    const availableCommands: Record<string, () => void> = {
+        displayRandomQuote: displayRandomQuote,
+    };
+
     // const handleClearLines = () => {
     //     setLines([]);
     // };
@@ -30,12 +52,21 @@ function StarsSection() {
     return (
         <section className='starsSection'>
             <div className='biosection'>
-                <div className='displayGlass' onClick={() => displayRandomQuote()}>
+                <div className='displayGlass'>
                     <span className="shine"></span>
                     <Terminal lines={lines} onTypingDone={() => setIsTypingDone(true)} />
-                    {/* <div className='displayButtons'>
-                        <ActionButton className="actionButton" actionCommand={() => console.log("test")}/>
-                    </div> */}
+                    <div className="commandContainer">
+                        <div className="commands">
+                            {commandButtons.map((commandButton) => 
+                                <ActionButton 
+                                    key={commandButton.Name}
+                                    className={commandButton.Name} 
+                                    actionCommand={availableCommands[commandButton.Click]} 
+                                />
+                            )}
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div className="bg-animation">

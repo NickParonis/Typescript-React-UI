@@ -1,5 +1,4 @@
 import React from 'react';
-import './terminal.css';
 
 interface Props {
     className: string;
@@ -8,7 +7,9 @@ interface Props {
 
 const ActionButton: React.FC<Props> = ({ className, actionCommand }) => {
     return (
-        <div className={className} onClick={actionCommand}></div>
+        <div className={`${className} commandButton`} onClick={actionCommand}>
+            {className}
+        </div>
     );
 }
 
