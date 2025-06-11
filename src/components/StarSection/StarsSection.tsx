@@ -12,7 +12,7 @@ function StarsSection() {
 
     const [lines, setLines] = useState(terminalResponses[0].text);
     const [isTypingDone, setIsTypingDone] = useState(false);
-    const [teminalMenu, setTeminalMenu] = useState("mainMenu");
+    const [teminalMenu] = useState("mainMenu");
 
     const displayRandomQuote = () => {
         if (isTypingDone) { 
