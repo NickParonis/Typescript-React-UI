@@ -8,11 +8,11 @@ import { useState, useEffect } from 'react';
 
 function StarsSection() {
     const stars = ['stars', 'starsBig'];
-    const [commandButtons, setcommandButtons] = useState([{Name: "RandomQuote", Click: "displayRandomQuote"}]);
+    const [commandButtons, setcommandButtons] = useState([{ClassName: "test", Name: "RandomQuote", Click: "displayRandomQuote"}]);
 
     const [lines, setLines] = useState(terminalResponses[0].text);
     const [isTypingDone, setIsTypingDone] = useState(false);
-    const [teminalMenu] = useState("mainMenu");
+    const [teminalMenu, setTeminalMenu] = useState("mainMenu");
 
     const displayRandomQuote = () => {
         if (isTypingDone) { 
@@ -26,17 +26,14 @@ function StarsSection() {
     };
 
     useEffect(() => {
-        if (!isTypingDone && teminalMenu == "mainMenu") {
-            // isTypingDone changed from true to false
+        if (!isTypingDone) {
             console.log("command buttons added to state");
             setcommandButtons([]);
         };
-        if (isTypingDone) {
-            // isTypingDone changed from true to false
-            console.log("command buttons added to state");
+        if (isTypingDone && teminalMenu == "mainMenu") {
             setcommandButtons([
-                { Name: "RandomQuote", Click: "displayRandomQuote" },
-                { Name: "PlayGame", Click: "displayRandomQuote" }
+                { ClassName: "RandomQuote", Name: "Earth Wisdom", Click: "displayRandomQuote" },
+                { ClassName: "RandomQuote", Name: "Play a game", Click: "displayRandomQuote" }
             ]);
         }
     }, [isTypingDone]);
@@ -60,7 +57,8 @@ function StarsSection() {
                             {commandButtons.map((commandButton) => 
                                 <ActionButton 
                                     key={commandButton.Name}
-                                    className={commandButton.Name} 
+                                    className={commandButton.ClassName} 
+                                    name={commandButton.Name}
                                     actionCommand={availableCommands[commandButton.Click]} 
                                 />
                             )}

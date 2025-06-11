@@ -87,9 +87,20 @@ background: #162942;
     height: 25px;
 }
 
+
+
 .commandButton {
     width: 120px;
+    text-align: center;
     cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 .commandContainer {

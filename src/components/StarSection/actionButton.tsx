@@ -2,13 +2,14 @@ import React from 'react';
 
 interface Props {
     className: string;
+    name: string;
     actionCommand?: () => void;
 }
 
-const ActionButton: React.FC<Props> = ({ className, actionCommand }) => {
+const ActionButton: React.FC<Props> = ({ className, name, actionCommand }) => {
     return (
         <div className={`${className} commandButton`} onClick={actionCommand}>
-            {className}
+            {name}
         </div>
     );
 }
