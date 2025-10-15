@@ -10,9 +10,10 @@ import { useState } from 'react';
 function StarsSection() {
     const stars = ['stars', 'starsBig'];
     // const [commandButtons, setcommandButtons] = useState([{ClassName: "test", Name: "RandomQuote", Click: "displayRandomQuote"}]);
-
+    
     const [lines, setLines] = useState(terminalResponses[0].text);
     const [isTypingDone, setIsTypingDone] = useState(false);
+    
     // const [teminalMenu] = useState("mainMenu");
 
     const displayRandomQuote = () => {
@@ -50,6 +51,18 @@ function StarsSection() {
     return (
         <section className='starsSection'>
             <div className='biosection'>
+                <div className='darkMode'>
+                    <input type="checkbox" 
+                        className="checkbox" 
+                        id="checkbox"
+                        onChange={() => document.body.classList.toggle('dark')}>
+                    </input>
+                    <label htmlFor="checkbox" className="checkbox-label">
+                        <i className="fas fa-sun"></i>
+                        <i className="fas fa-moon"></i>
+                        <span className="ball"></span>
+                    </label>
+                </div>
                 <div className='displayGlass'
                 onClick={() => displayRandomQuote()}>
                     <span className="shine"></span>
