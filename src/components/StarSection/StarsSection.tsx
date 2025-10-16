@@ -29,36 +29,10 @@ function StarsSection() {
     const switchLightMode = () => {
         const root = document.documentElement;
         if (root.getAttribute('data-theme') === 'light') {
-          root.removeAttribute('data-theme'); // back to dark default
+          root.removeAttribute('data-theme'); // back to :root/default
         } else {
           root.setAttribute('data-theme', 'light');
         }
-
-        const section = document.querySelector('.starsSection');
-        if (section) {
-            section.classList.toggle('starsSection-light');
-        }
-
-        const section2 = document.querySelector('.cardlist');
-        if (section2) {
-            section2.classList.toggle('cardlist-light');
-        }
-
-        const section3 = document.querySelector('.displayGlass');
-        if (section3) {
-            section3.classList.toggle('displayGlass-light');
-        }
-
-        // const section4 = document.querySelector('.prompt');
-        // if (section4) {
-        //     section4.classList.toggle('prompt-light');
-        // }
-
-        const section5 = document.querySelector('.bg-animation');
-        if (section5) {
-            section5.classList.toggle('bg-animation-light');
-        }
-
     }
 
     // useEffect(() => {

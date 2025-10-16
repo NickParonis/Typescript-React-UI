@@ -73,10 +73,6 @@
     color: var(--prompt-color);
 }
 
-/* .prompt-light {
-    color: #0b0c0e6e !important;
-} */
-
 .cursor {
     display: inline-block;
     width: 10px;

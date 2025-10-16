@@ -3,13 +3,30 @@
 
 /*==================== VARIABLES CSS ====================*/
 :root {
-  /*========== Colors ==========*/
+  /*========== global ==========*/
   --text-color: #000000;
   --bg-color: #222222;
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
   --normal-font-size: 0.938rem;
+
+  --prompt-color: #56749b6e;
+  --starsection-background-gradient-color: linear-gradient(180deg, rgba(32,41,51,1) 35%, rgba(32,41,51,1) 68%, rgba(34,34,34,1) 100%);
+  --displayGlass-background-color: rgba(255, 255, 255, 0.027);
+  --displayGlass-color: #e4ebffe8;
+  --opacity-light-hidden: 100;
+  --opacity-dark-hidden: 0;
+}
+
+:root[data-theme="light"] {
+  --prompt-color: #0b0c0e6e;
+  --starsection-background-gradient-color: linear-gradient(0deg,rgba(193, 208, 212, 1) 1%, rgba(193, 208, 212, 1) 69%, rgba(157, 202, 209, 1) 100%);
+  --displayGlass-background-color: #ffffffb0;
+  --displayGlass-color: black;
+  --bg-color: #C1D0D4;
+  --opacity-light-hidden: 0;
+  --opacity-dark-hidden: 100;
 }
 
 @media screen and (min-width: 968px) {

@@ -3,15 +3,10 @@
     background: rgb(34,34,34);
     POSITION: RELATIVE;
     background: rgb(32,41,51);
-    background: linear-gradient(180deg, rgba(32,41,51,1) 35%, rgba(32,41,51,1) 68%, rgba(34,34,34,1) 100%);
+    background: var(--starsection-background-gradient-color);
 
     /* background: #162942;
     background: linear-gradient(180deg, rgba(22, 41, 66, 1) 0%, rgba(34, 34, 34, 1) 79%); */
-}
-
-.starsSection-light {
-    background: #00D0FF !important;
-    background: linear-gradient(0deg,rgba(161, 238, 255, 1) 1%, rgba(204, 254, 255, 1) 52%, rgba(245, 254, 255, 1) 100%) !important;
 }
 
 .biosection{
@@ -76,21 +71,16 @@
         margin: auto;
         width: 80vw;
         justify-content: center;
-        color: #e4ebffe8;
+        color: var(--displayGlass-color);
         flex-direction: column;
         justify-content: center;
         border-radius: 20px;
-        background-color: rgba(255, 255, 255, 0.027);
+        background-color: var(--displayGlass-background-color);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(77, 104, 138, 0.4);
         box-shadow: 0px 3px 3px rgb(0, 0, 0, 0.089);
         max-width: 600px;
         overflow: hidden;
-}
-
-.displayGlass-light {
-    background-color: #ffffffb0 !important;
-    color: black !important;
 }
 
 .displayButtons {
@@ -131,11 +121,9 @@
     position: relative;
     top: -100%;
     z-index: 1;
+    opacity: var(--opacity-light-hidden)
 }
 
-.bg-animation-light {
-    display: none;
-}
 
 .commands {
     display: flex;

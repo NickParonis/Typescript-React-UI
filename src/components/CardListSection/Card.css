@@ -1,9 +1,6 @@
 .cardlist {
   padding: 20px;
-}
-
-.cardlist-light {
-  background-color: #A1EEFF;
+  color: var(--bg-color);
 }
 
 .cardcontainer {
@@ -15,13 +12,16 @@
   }
   
   .card__bx {
+      /* Apply to the .card class */
+
+    opacity: 0; /* start invisible */
+    animation: fadeIn 3s ease forwards; /* 1s fade-in, keep final state */
+
     --dark-color: #2e2e2e;
     --dark-alt-color: #777777;
     --white-color: #ffffff;
     --button-color: #333333;
     --transition: 0.5s ease-in-out;
-  
-    
     margin: 25px;
     font-family: inherit;
     height: 270px;
@@ -32,6 +32,7 @@
     align-items: center;
     background: var(--dark-color);
     transition: var(--transition);
+
   }
   .card__bx::before,
   .card__bx::after {
@@ -239,5 +240,18 @@
     /* transform: skewY(15deg); */
     border-bottom: 4px solid #5b98eb;
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(100px); /* subtle upward motion */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
 
   
