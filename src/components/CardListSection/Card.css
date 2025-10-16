@@ -15,7 +15,7 @@
       /* Apply to the .card class */
 
     opacity: 0; /* start invisible */
-    animation: fadeIn 3s ease forwards; /* 1s fade-in, keep final state */
+    animation: fadeIn 1s ease-in forwards; /* 1s fade-in, keep final state */
 
     --dark-color: #2e2e2e;
     --dark-alt-color: #777777;
@@ -244,7 +244,7 @@
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(100px); /* subtle upward motion */
+      transform: translateY(20px); /* subtle upward motion */
     }
     to {
       opacity: 1;
