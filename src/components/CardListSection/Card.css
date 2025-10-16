@@ -2,6 +2,10 @@
   padding: 20px;
 }
 
+.cardlist-light {
+  background-color: #A1EEFF;
+}
+
 .cardcontainer {
     display: flex;
     flex-direction: row;

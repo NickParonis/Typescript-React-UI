@@ -1,0 +1,7 @@
+:root {
+  --prompt-color: #56749b6e;
+  }
+  
+:root[data-theme="light"] {
+  --prompt-color: #0b0c0e6e;
+}

@@ -13,7 +13,6 @@ function StarsSection() {
     
     const [lines, setLines] = useState(terminalResponses[0].text);
     const [isTypingDone, setIsTypingDone] = useState(false);
-    
     // const [teminalMenu] = useState("mainMenu");
 
     const displayRandomQuote = () => {
@@ -26,6 +25,41 @@ function StarsSection() {
             }
         }
     };
+
+    const switchLightMode = () => {
+        const root = document.documentElement;
+        if (root.getAttribute('data-theme') === 'light') {
+          root.removeAttribute('data-theme'); // back to dark default
+        } else {
+          root.setAttribute('data-theme', 'light');
+        }
+
+        const section = document.querySelector('.starsSection');
+        if (section) {
+            section.classList.toggle('starsSection-light');
+        }
+
+        const section2 = document.querySelector('.cardlist');
+        if (section2) {
+            section2.classList.toggle('cardlist-light');
+        }
+
+        const section3 = document.querySelector('.displayGlass');
+        if (section3) {
+            section3.classList.toggle('displayGlass-light');
+        }
+
+        // const section4 = document.querySelector('.prompt');
+        // if (section4) {
+        //     section4.classList.toggle('prompt-light');
+        // }
+
+        const section5 = document.querySelector('.bg-animation');
+        if (section5) {
+            section5.classList.toggle('bg-animation-light');
+        }
+
+    }
 
     // useEffect(() => {
     //     if (!isTypingDone) {
@@ -55,7 +89,7 @@ function StarsSection() {
                     <input type="checkbox" 
                         className="checkbox" 
                         id="checkbox"
-                        onChange={() => document.body.classList.toggle('dark')}>
+                        onChange={() => switchLightMode()}>
                     </input>
                     <label htmlFor="checkbox" className="checkbox-label">
                         <i className="fas fa-sun"></i>

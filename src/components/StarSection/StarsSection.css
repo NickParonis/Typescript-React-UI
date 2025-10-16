@@ -2,10 +2,16 @@
     height: 60vh;
     background: rgb(34,34,34);
     POSITION: RELATIVE;
-    /* background: rgb(32,41,51);
-    background: linear-gradient(180deg, rgba(32,41,51,1) 35%, rgba(32,41,51,1) 68%, rgba(34,34,34,1) 100%); */
-background: #162942;
-    background: linear-gradient(180deg, rgba(22, 41, 66, 1) 0%, rgba(34, 34, 34, 1) 79%);
+    background: rgb(32,41,51);
+    background: linear-gradient(180deg, rgba(32,41,51,1) 35%, rgba(32,41,51,1) 68%, rgba(34,34,34,1) 100%);
+
+    /* background: #162942;
+    background: linear-gradient(180deg, rgba(22, 41, 66, 1) 0%, rgba(34, 34, 34, 1) 79%); */
+}
+
+.starsSection-light {
+    background: #00D0FF !important;
+    background: linear-gradient(0deg,rgba(161, 238, 255, 1) 1%, rgba(204, 254, 255, 1) 52%, rgba(245, 254, 255, 1) 100%) !important;
 }
 
 .biosection{
@@ -21,9 +27,9 @@ background: #162942;
 .checkbox {
     opacity: 0;
     position: absolute;
-  }
+}
   
-  .checkbox-label {
+.checkbox-label {
     background-color: #111;
     width: 50px;
     height: 26px;
@@ -34,13 +40,13 @@ background: #162942;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  .fa-moon {color: #3ba9d5;}
+.fa-moon {color: #3ba9d5;}
   
-  .fa-sun {color: #f39c12;}
+.fa-sun {color: #f39c12;}
   
-  .checkbox-label .ball {
+.checkbox-label .ball {
     background-color: #c2cdf9;
     width: 18px;
     height: 18px;
@@ -49,11 +55,11 @@ background: #162942;
     top: 4px;
     border-radius: 50%;
     transition: transform 0.15s linear;
-  }
+}
   
   .checkbox:checked + .checkbox-label .ball {
     transform: translateX(24px);
-  }
+}
 
 .darkMode{
     position: absolute;
@@ -82,6 +88,11 @@ background: #162942;
         overflow: hidden;
 }
 
+.displayGlass-light {
+    background-color: #ffffffb0 !important;
+    color: black !important;
+}
+
 .displayButtons {
     height: 60px;
     display: flex;
@@ -106,11 +117,11 @@ background: #162942;
     justify-content: center;
 }
 .image {
-    width: 150px; /* Set the width of the image */
-    height: 150px; /* Set the height of the image */
-    border-radius: 50%; /* Makes the image circular */
-    overflow: hidden; /* Hides any overflow outside the circle */
-    border: 2px solid #ccc; /* Add a border if needed */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ccc;
 }
 
 .bg-animation {
@@ -120,6 +131,10 @@ background: #162942;
     position: relative;
     top: -100%;
     z-index: 1;
+}
+
+.bg-animation-light {
+    display: none;
 }
 
 .commands {
@@ -133,8 +148,6 @@ background: #162942;
     height: 25px;
 }
 
-
-
 .commandButton {
     width: 120px;
     text-align: center;
@@ -143,15 +156,15 @@ background: #162942;
     animation: fadeIn 0.8s ease forwards;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
 .commandContainer {
     display: flex;
     flex-direction: column;
     padding: 10px 10px 18px 10px;
     justify-content: center;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }

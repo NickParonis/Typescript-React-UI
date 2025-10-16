@@ -70,8 +70,12 @@
 }
 
 .prompt {
-    color: #56749b6e;
+    color: var(--prompt-color);
 }
+
+/* .prompt-light {
+    color: #0b0c0e6e !important;
+} */
 
 .cursor {
     display: inline-block;
@@ -89,24 +93,21 @@
 
 }
 
-/* Medium devices (tablets, >= 768px) */
 @media (max-width: 630px) {
     .prompt {
         display: none;
     }
 }
 
-/* Large devices (laptops/desktops, >= 1024px) */
 @media (max-width: 1024px) {
 
 }
 
-/* Extra large devices (large desktops, >= 1200px) */
 @media (max-width: 1200px) {
 
 }
 
-/* Ultra large screens (>= 1600px) */
+
 @media (max-width: 1600px) {
 
 }
