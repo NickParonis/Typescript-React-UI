@@ -1,5 +1,5 @@
 import './Stars.css';
-import './StarsSection.css';
+import './IntroductionSection.css';
 import terminalResponses from '../../data/terminalResponses.json'
 import quotes from '../../data/quotes.json'
 import Terminal from './terminal';
@@ -7,7 +7,7 @@ import Terminal from './terminal';
 // import { useState, useEffect } from 'react';
 import { useState } from 'react';
 
-function StarsSection() {
+function IntroductionSection() {
     const stars = ['stars', 'starsBig'];
     // const [commandButtons, setcommandButtons] = useState([{ClassName: "test", Name: "RandomQuote", Click: "displayRandomQuote"}]);
     
@@ -57,7 +57,7 @@ function StarsSection() {
     // };
 
     return (
-        <section className='starsSection'>
+        <section className='introduction'>
             <div className='biosection'>
                 <div className='darkMode'>
                     <input type="checkbox" 
@@ -98,4 +98,4 @@ function StarsSection() {
     );
 }
 
-export default StarsSection;
+export default IntroductionSection;

@@ -1,13 +1,14 @@
-import StarsSection from './components/StarSection/StarsSection.tsx';
+import IntroductionSection from './components/IntroductionSection/IntroductionSection.tsx';
 import CardList from './components/CardListSection/CardListSection.tsx';
-import "./styles/global.css";
+import './index.css'
+// import "./styles/global.css";
 // import ChatSection from './components/ChatSection.tsx';
 
 
 function App(){
   return (
     <>
-      <StarsSection />
+      <IntroductionSection />
       <CardList />
       {/* <ChatSection /> */}
       {/* <BasicModal /> */}
